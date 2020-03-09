@@ -112,6 +112,7 @@
                 当前版本:$version
                 最新版本:$versionget
                 新版本信息:$info
+                请前往Github下载:https://github.com/soxft/netease/
                 ";
             }
         break;
