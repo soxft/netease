@@ -1,5 +1,5 @@
 <?php
-    $version = "1.0";
+    $version = "1.1";
     //用于检查更新,忽删
     @$one = $argv[1];
     switch($one)
@@ -91,7 +91,7 @@
             {
                 exit("这个id好像输错啦!");  
             }
-            echo "(id:$id) ->" . $data['data'][0]['url'] . "\r\n";
+            echo "(id:$id) -> " . $data['data'][0]['url'] . "\r\n";
         break;
         case 'update':
             echo "checking...\r\n";
@@ -123,6 +123,18 @@
                 2.php netease.php playlist 歌单id -> 获取歌单内歌曲
                 3.php netease.php song 歌曲id (比特率) -> 获取歌曲直链 (比特率只能为64000,128000,198000,320000)
                 4.php netease.php update -> 检查更新(暂不支持自动更新,未来会增加)
+
+                搜索类型相关
+                |search_type|含义      | 
+                | --------- | -------- |
+                |1          |	单曲   |
+                |10         |	专辑   |
+                |100        |	歌手   |
+                |1000       |	歌单   |
+                |1002       |	用户   |
+                |1004       |	mv     |
+                |1006       |	歌词   |
+                |1009       | 主播电台 |
 
                 关于:
                 欢迎使用netease for php,made by xcsoft(https://blog.xsot.cn)
