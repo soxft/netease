@@ -6,6 +6,7 @@
 <img src="https://img.shields.io/github/stars/soxft/netease.svg" alt="GitHub stars"></a>
 <a href="https://github.com/soxft/netease/network/members"> 
 <img src="https://img.shields.io/github/forks/soxft/netease.svg" alt="GitHub forks"></a> 
+## 简介
 网易云音乐的php版本！(neteaseforphp)
 ## 目前支持
 1.php netease.php search 搜索类型 关键词 (搜索个数) (偏移数量,用于分页) ->  搜索<br />
