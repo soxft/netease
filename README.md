@@ -1,6 +1,13 @@
 # netease
+![HitCount](http://hits.dwyl.com/soxft/soxft/netease.svg)
+<a href="http://www.apache.org/licenses/LICENSE-2.0.html"> 
+<img src="https://img.shields.io/github/license/soxft/netease.svg" alt="License"></a>
+<a href="https://github.com/soxft/netease/stargazers"> 
+<img src="https://img.shields.io/github/stars/soxft/netease.svg" alt="GitHub stars"></a>
+<a href="https://github.com/soxft/netease/network/members"> 
+<img src="https://img.shields.io/github/forks/soxft/netease.svg" alt="GitHub forks"></a> 
 网易云音乐的php版本！(neteaseforphp)
-# 目前支持
+## 目前支持
 1.php netease.php search 搜索类型 关键词 (搜索个数) (偏移数量,用于分页) ->  搜索<br />
 2.php netease.php playlist 歌单id -> 获取歌单内歌曲<br />
 3.php netease.php song 歌曲id (比特率) -> 获取歌曲直链 (比特率只能为64000,128000,198000,320000)<br />
