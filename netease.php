@@ -91,7 +91,7 @@
             {
                 exit("这个id好像输错啦!");  
             }
-            echo "(id:$id) ->" . $data['data'][0]['url'];
+            echo "(id:$id) ->" . $data['data'][0]['url'] . "\r\n";
         break;
         case 'update':
             echo "checking...\r\n";
