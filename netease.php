@@ -5,15 +5,14 @@
     switch($one)
     {
         case 'search':
-            @$searchtype = $argv[2];
-            @$s = $argv[3];
-            @$limit = $argv[4];
-            @$offset = $argv[5];
-            if(empty($searchtype) || empty($s)){
-                exit("错误的格式，请使用 php netease.php search 搜索类型 关键词 (搜索个数) (偏移数量,用于分页)");
+            @$s = $argv[2];
+            @$limit = $argv[3];
+            @$offset = $argv[4];
+            if(empty($s)){
+                exit("错误的格式，请使用 php netease.php search 关键词 (搜索个数) (偏移数量,用于分页)");
             }
             echo "searching...\r\n";
-            $url = "https://api.xsot.cn/netease/?type=search&offset=" . $offset . "&limit=" . $limit . "&search_type=" . $searchtype . "&s=" . $s;
+            $url = "https://api.xsot.cn/netease/?type=search&offset=" . $offset . "&limit=" . $limit . "&s=" . $s;
             //echo $url;
             //exit();
             //echo 1;
@@ -118,22 +117,10 @@
         case 'help':
             echo "
                 帮助:
-                1.php netease.php search 搜索类型 关键词 (搜索个数) (偏移数量,用于分页) ->  搜索
+                1.php netease.php search 关键词 (搜索个数) (偏移数量,用于分页) ->  搜索歌曲
                 2.php netease.php playlist 歌单id -> 获取歌单内歌曲
                 3.php netease.php song 歌曲id-> 获取歌曲直链
                 4.php netease.php update -> 检查更新(暂不支持自动更新,未来会增加)
-
-                搜索类型相关
-                |search_type|含义      | 
-                | --------- | -------- |
-                |1          |	单曲   |
-                |10         |	专辑   |
-                |100        |	歌手   |
-                |1000       |	歌单   |
-                |1002       |	用户   |
-                |1004       |	mv     |
-                |1006       |	歌词   |
-                |1009       | 主播电台 |
 
                 关于:
                 欢迎使用netease for php,made by xcsoft(https://blog.xsot.cn)
