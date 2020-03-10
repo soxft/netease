@@ -1,5 +1,5 @@
 <?php
-    $version = "1.1";
+    $version = "1.2";
     //用于检查更新,忽删
     @$one = $argv[1];
     switch($one)
@@ -79,19 +79,18 @@
         break;
         case 'song':
             @$id = $argv[2];
-            @$br = $argv[3];
             if(empty($id)){
-                exit("错误的格式，请使用 php netease.php song 歌曲id (比特率) [比特率只能为64000,128000,198000,320000]");
+                exit("错误的格式，请使用 php netease.php song 歌曲id");
             }
             echo "Loading...\r\n";
-            $url = "https://api.xsot.cn/netease/?type=song&id=" . $id . "&br=" . $br;
+            $url = "https://api.xsot.cn/netease/?type=song&id=" . $id;
             @$data = file_get_contents($url) or die("API接口错误!请尝试通过php netease.php update获取更新解决");
             @$data = json_decode($data,true);
-            if(empty($data['data'][0]['url']))
+            if($data['code'] == 404)
             {
                 exit("这个id好像输错啦!");  
             }
-            echo "(id:$id) -> " . $data['data'][0]['url'] . "\r\n";
+            echo "(id:$id) -> " . $data['data']['url'] . "\r\n";
         break;
         case 'update':
             echo "checking...\r\n";
@@ -121,7 +120,7 @@
                 帮助:
                 1.php netease.php search 搜索类型 关键词 (搜索个数) (偏移数量,用于分页) ->  搜索
                 2.php netease.php playlist 歌单id -> 获取歌单内歌曲
-                3.php netease.php song 歌曲id (比特率) -> 获取歌曲直链 (比特率只能为64000,128000,198000,320000)
+                3.php netease.php song 歌曲id-> 获取歌曲直链
                 4.php netease.php update -> 检查更新(暂不支持自动更新,未来会增加)
 
                 搜索类型相关
