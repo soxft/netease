@@ -1,5 +1,5 @@
 # netease
-![HitCount](http://hits.dwyl.com/soxft/soxft/netease.svg)
+[![](https://data.jsdelivr.com/v1/package/gh/soxft/netease/badge)](https://www.jsdelivr.com/package/gh/soxft/netease)
 <a href="http://www.apache.org/licenses/LICENSE-2.0.html"> 
 <img src="https://img.shields.io/github/license/soxft/netease.svg" alt="License"></a>
 <a href="https://github.com/soxft/netease/stargazers"> 
